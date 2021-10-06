@@ -9,8 +9,7 @@ def weekdayChecker(_month_, _day_):
     if tmp >= 0 :
         weekday += tmp % 7
     else :
-        weekday -= abs(tmp) % 7 - 7
-        weekday %= 7
+        weekday = (weekday + tmp % 7) % 7
 
     return weekdays[weekday-1]
 
